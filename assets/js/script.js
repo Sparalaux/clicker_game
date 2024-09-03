@@ -25,7 +25,7 @@ shopitem1.addEventListener("click", () =>{
         score.innerHTML = "score: "+Math.ceil(compteur);
         setInterval(()=>{
             compteur+=1;
-            score.innerHTML = "score: "+compteur;
+            score.innerHTML = "score: "+Math.ceil(compteur);
         }, 1000);
     }
 });
