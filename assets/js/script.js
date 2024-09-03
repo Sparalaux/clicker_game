@@ -2,7 +2,7 @@ const click = document.querySelector("#click");
 const score = document.querySelector("#score");
 const shopitem1 = document.querySelector("#shopitem1");
 const shopitem2 = document.querySelector("#shopitem2");
-console.log(click);
+console.log(click.src);
 console.log(score);
 
 
