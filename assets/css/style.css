@@ -42,6 +42,7 @@ body{
     border: solid black 2px;
     height: 70vh;
     overflow: auto;
+    background-color: white;
 }
 
 .jeu .droite .shop{
