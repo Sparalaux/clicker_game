@@ -33,7 +33,7 @@ shopitem2.addEventListener("click",()=>{
         score.innerHTML = "score: "+compteur;
         clicksouris+=1;
         if(click.outerHTML == '<img id="click" src="./assets/image/oeuf_axolotl.jpg" alt="">'){
-            click = '<img id="click" src="./assets/image/bébé_axolotl.jpg" alt="">';
+            click.outerHTML = '<img id="click" src="./assets/image/bébé_axolotl.jpg" alt="">';
             console.log("image changer");
         }
     }
