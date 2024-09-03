@@ -13,6 +13,11 @@ h3{
     font-size: 30px;
 }
 
+body{
+    background-image: url(../image/background.webp);
+    background-size:cover;
+}
+
 .jeu{
     margin-top: 70px;
     display: flex;
@@ -37,4 +42,12 @@ h3{
     border: solid black 2px;
     height: 70vh;
     overflow: auto;
+}
+
+.jeu .droite .shopbtn{
+    width: 100%;
+    height: 7vh;
+    border-radius: 0;
+    border: none;
+    cursor: pointer;
 }
