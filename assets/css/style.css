@@ -44,6 +44,12 @@ body{
     overflow: auto;
 }
 
+.jeu .droite .shop{
+    text-align: center;
+    background-color: white;
+    border-bottom: solid black 2px;
+}
+
 .jeu .droite .shopbtn{
     width: 100%;
     height: 7vh;
