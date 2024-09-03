@@ -36,10 +36,9 @@ shopitem2.addEventListener("click",()=>{
         Math.ceil(prix2 = prix2*1.2);
         score.innerHTML = "score: "+Math.ceil(compteur);
         clicksouris+=1;
-        if(click.currentSrc == "https://sparalaux.github.io/clicker_game/assets/image/oeuf_axolotl.jpg"){
-            click.currentSrc = "https://sparalaux.github.io/clicker_game/assets/image/bébé_axolotl.jpg";
+        if(click.src == "https://sparalaux.github.io/clicker_game/assets/image/oeuf_axolotl.jpg"){
+            click.src = "https://sparalaux.github.io/clicker_game/assets/image/bébé_axolotl.jpg";
             console.log("image changer");
-            console.log(click);
         }
     }
 });
