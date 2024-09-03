@@ -10,6 +10,8 @@ console.log(score);
 
 var compteur = 0;
 var clicksouris = 1;
+var prix1 = 10;
+var prix2 = 30;
 click.addEventListener("click", () => {
     compteur+=clicksouris;
     score.innerHTML = "score: "+compteur;
@@ -17,8 +19,9 @@ click.addEventListener("click", () => {
 });
 
 shopitem1.addEventListener("click", () =>{
-    if(compteur>=10){
-        compteur-=10;
+    if(compteur>=prix1){
+        compteur-=prix1;
+        Math.ceil(prix1 = prix1*1.2);
         score.innerHTML = "score: "+compteur;
         setInterval(()=>{
             compteur+=1;
@@ -28,8 +31,9 @@ shopitem1.addEventListener("click", () =>{
 });
 
 shopitem2.addEventListener("click",()=>{
-    if(compteur>=30){
-        compteur-=30;
+    if(compteur>=prix2){
+        compteur-=prix2;
+        Math.ceil(prix2 = prix2*1.2);
         score.innerHTML = "score: "+compteur;
         clicksouris+=1;
         if(click.outerHTML == '<img id="click" src="./assets/image/oeuf_axolotl.jpg" alt="">'){
