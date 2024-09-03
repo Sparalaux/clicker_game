@@ -1,6 +1,7 @@
 const click = document.querySelector("#click");
 const score = document.querySelector("#score");
-const shopitem1 = document.querySelector("#shopitem1")
+const shopitem1 = document.querySelector("#shopitem1");
+const shopitem2 = document.querySelector("#shopitem2");
 console.log(click);
 console.log(score);
 
@@ -8,12 +9,12 @@ console.log(score);
 
 
 var compteur = 0;
-
+var clicksouris = 1;
 click.addEventListener("click", () => {
-    compteur+=1;
+    compteur+=clicksouris;
     score.innerHTML = "score: "+compteur;
 
-})
+});
 
 shopitem1.addEventListener("click", () =>{
     if(compteur>=10){
@@ -22,6 +23,14 @@ shopitem1.addEventListener("click", () =>{
         setInterval(()=>{
             compteur+=1;
             score.innerHTML = "score: "+compteur;
-        }, 1000)
+        }, 1000);
     }
-})
+});
+
+shopitem2.addEventListener("click",()=>{
+    if(compteur>=30){
+        compteur-=30;
+        score.innerHTML = "score: "+compteur;
+        clicksouris+=1
+    }
+});
