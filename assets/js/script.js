@@ -31,6 +31,9 @@ shopitem2.addEventListener("click",()=>{
     if(compteur>=30){
         compteur-=30;
         score.innerHTML = "score: "+compteur;
-        clicksouris+=1
+        clicksouris+=1;
+        if(click.src == "https://sparalaux.github.io/clicker_game/assets/image/oeuf_axolotl.jpg"){
+            click.src = "https://sparalaux.github.io/clicker_game/assets/image/bébé_axolotl.jpg"
+        }
     }
 });
