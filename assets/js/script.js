@@ -2,7 +2,7 @@ const click = document.querySelector("#click");
 const score = document.querySelector("#score");
 const shopitem1 = document.querySelector("#shopitem1");
 const shopitem2 = document.querySelector("#shopitem2");
-console.log(click.src);
+console.log(click);
 console.log(score);
 
 
@@ -32,8 +32,8 @@ shopitem2.addEventListener("click",()=>{
         compteur-=30;
         score.innerHTML = "score: "+compteur;
         clicksouris+=1;
-        if(click.src == "https://sparalaux.github.io/clicker_game/assets/image/oeuf_axolotl.jpg"){
-            click.src = "https://sparalaux.github.io/clicker_game/assets/image/bébé_axolotl.jpg"
+        if(click.src == 'https://sparalaux.github.io/clicker_game/assets/image/oeuf_axolotl.jpg'){
+            click = '<img id="click" src="./assets/image/bébé_axolotl.jpg" alt="">'
         }
     }
 });
