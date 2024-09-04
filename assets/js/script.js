@@ -4,6 +4,7 @@ const shopitem1 = document.querySelector("#shopitem1");
 const shopitem2 = document.querySelector("#shopitem2");
 const shopitem3 = document.querySelector("#shopitem3");
 const shopitem4 = document.querySelector("#shopitem4");
+const shopitem5 = document.querySelector("#shopitem5");
 console.log(click);
 console.log(score);
 
@@ -16,6 +17,7 @@ var prix1 = 10;
 var prix2 = 30;
 var prix3 = 100;
 var prix4 = 300;
+var prix5 = 1000;
 click.addEventListener("click", () => {
     compteur+=clicksouris;
     score.innerHTML = "score: "+Math.ceil(compteur);
@@ -72,5 +74,19 @@ shopitem4.addEventListener("click", () =>{
             compteur+=15;
             score.innerHTML = "score: "+Math.ceil(compteur);
         }, 5000);
+    }
+});
+
+shopitem5.addEventListener("click",()=>{
+    if(compteur>=prix5){
+        compteur-=prix5;
+        Math.ceil(prix5 = prix5*5);
+        score.innerHTML = "score: "+Math.ceil(compteur);
+        clicksouris+=5;
+        shopitem5.innerHTML = "grand aquarium "+Math.ceil(prix5);
+        if(click.src == "https://sparalaux.github.io/clicker_game/assets/image/bébé_axolotl.jpg"){
+            click.src = "https://sparalaux.github.io/clicker_game/assets/image/axolotl.jpg";
+            console.log("image changer");
+        }
     }
 });
