@@ -13,6 +13,8 @@ console.log(score);
 
 var compteur = 0;
 var clicksouris = 1;
+var imagechanger1 = false;
+var imagechanger2 = false;
 var prix1 = 10;
 var prix2 = 30;
 var prix3 = 100;
@@ -44,8 +46,9 @@ shopitem2.addEventListener("click",()=>{
         score.innerHTML = "score: "+Math.ceil(compteur);
         clicksouris+=1;
         shopitem2.innerHTML = "petit aquarium "+Math.ceil(prix2);
-        if(click.src == "https://sparalaux.github.io/clicker_game/assets/image/oeuf_axolotl.jpg"){
+        if(click.src == "https://sparalaux.github.io/clicker_game/assets/image/oeuf_axolotl.jpg" && !imagechanger1){
             click.src = "https://sparalaux.github.io/clicker_game/assets/image/bébé_axolotl.jpg";
+            imagechanger1 = true;
             console.log("image changer");
         }
     }
@@ -84,8 +87,9 @@ shopitem5.addEventListener("click",()=>{
         score.innerHTML = "score: "+Math.ceil(compteur);
         clicksouris+=5;
         shopitem5.innerHTML = "grand aquarium "+Math.ceil(prix5);
-        if(click.src == "https://sparalaux.github.io/clicker_game/assets/image/bébé_axolotl.jpg"){
+        if(click.src == "https://sparalaux.github.io/clicker_game/assets/image/oeuf_axolotl.jpg" && !imagechanger2){
             click.src = "https://sparalaux.github.io/clicker_game/assets/image/axolotl.jpg";
+            imagechanger2 = true;
             console.log("image changer");
         }
     }
