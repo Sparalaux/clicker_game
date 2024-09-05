@@ -5,6 +5,9 @@ const shopitem2 = document.querySelector("#shopitem2");
 const shopitem3 = document.querySelector("#shopitem3");
 const shopitem4 = document.querySelector("#shopitem4");
 const shopitem5 = document.querySelector("#shopitem5");
+const shopitem6 = document.querySelector("#shopitem6");
+const shopitem7 = document.querySelector("#shopitem7");
+const shopitem8 = document.querySelector("#shopitem8");
 console.log(click);
 console.log(score);
 
@@ -15,11 +18,15 @@ var compteur = 0;
 var clicksouris = 1;
 var imagechanger1 = false;
 var imagechanger2 = false;
+var imagechanger3 = false;
 var prix1 = 10;
 var prix2 = 30;
 var prix3 = 100;
 var prix4 = 300;
 var prix5 = 1000;
+var prix6 = 1500;
+var prix7 = 1700;
+var prix8 = 2500;
 click.addEventListener("click", () => {
     compteur+=clicksouris;
     score.innerHTML = "score: "+Math.ceil(compteur);
@@ -90,7 +97,48 @@ shopitem5.addEventListener("click",()=>{
         if(click.src == "https://sparalaux.github.io/clicker_game/assets/image/b%C3%A9b%C3%A9_axolotl.jpg" && !imagechanger2){
             click.src = "https://sparalaux.github.io/clicker_game/assets/image/axolotl.jpg";
             imagechanger2 = true;
-            console.log("image changer");
+            console.log(console.log(click.src));
+        }
+    }
+});
+
+shopitem6.addEventListener("click", () =>{
+    if(compteur>=prix6){
+        compteur-=prix6;
+        Math.ceil(prix6 = prix6*1.7);
+        score.innerHTML = "score: "+Math.ceil(compteur);
+        shopitem4.innerHTML = "nourriture: petite crevette "+Math.ceil(prix6);
+        setInterval(()=>{
+            compteur+=25;
+            score.innerHTML = "score: "+Math.ceil(compteur);
+        }, 7000);
+    }
+});
+
+shopitem7.addEventListener("click", () =>{
+    if(compteur>=prix7){
+        compteur-=prix7;
+        Math.ceil(prix7 = prix7*1.7);
+        score.innerHTML = "score: "+Math.ceil(compteur);
+        shopitem4.innerHTML = "nourriture: petite crevette "+Math.ceil(prix7);
+        setInterval(()=>{
+            compteur+=50;
+            score.innerHTML = "score: "+Math.ceil(compteur);
+        }, 10000);
+    }
+});
+
+shopitem8.addEventListener("click",()=>{
+    if(compteur>=prix8){
+        compteur-=prix8;
+        Math.ceil(prix8 = prix8*5);
+        score.innerHTML = "score: "+Math.ceil(compteur);
+        clicksouris+=20;
+        shopitem5.innerHTML = "grand aquarium "+Math.ceil(prix8);
+        if(click.src == "https://sparalaux.github.io/clicker_game/assets/image/b%C3%A9b%C3%A9_axolotl.jpg" && !imagechanger3){
+            click.src = "https://sparalaux.github.io/clicker_game/assets/image/sauvage_axolotl.jpg";
+            imagechanger2 = true;
+            console.log(console.log(click.src));
         }
     }
 });
