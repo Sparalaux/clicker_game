@@ -97,7 +97,7 @@ shopitem5.addEventListener("click",()=>{
         if(click.src == "https://sparalaux.github.io/clicker_game/assets/image/b%C3%A9b%C3%A9_axolotl.jpg" && !imagechanger2){
             click.src = "https://sparalaux.github.io/clicker_game/assets/image/axolotl.jpg";
             imagechanger2 = true;
-            console.log(console.log(click.src));
+            console.log(click.src);
         }
     }
 });
