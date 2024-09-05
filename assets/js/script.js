@@ -135,7 +135,7 @@ shopitem8.addEventListener("click",()=>{
         score.innerHTML = "score: "+Math.ceil(compteur);
         clicksouris+=20;
         shopitem5.innerHTML = "grand aquarium "+Math.ceil(prix8);
-        if(click.src == "https://sparalaux.github.io/clicker_game/assets/image/b%C3%A9b%C3%A9_axolotl.jpg" && !imagechanger3){
+        if(click.src == "https://sparalaux.github.io/clicker_game/assets/image/axolotl.jpg" && !imagechanger3){
             click.src = "https://sparalaux.github.io/clicker_game/assets/image/sauvage_axolotl.jpg";
             imagechanger2 = true;
             console.log(console.log(click.src));
