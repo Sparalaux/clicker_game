@@ -137,8 +137,8 @@ shopitem8.addEventListener("click",()=>{
         shopitem5.innerHTML = "grand aquarium "+Math.ceil(prix8);
         if(click.src == "https://sparalaux.github.io/clicker_game/assets/image/axolotl.jpg" && !imagechanger3){
             click.src = "https://sparalaux.github.io/clicker_game/assets/image/sauvage_axolotl.jpg";
-            imagechanger2 = true;
-            console.log(console.log(click.src));
+            imagechanger3 = true;
+            console.log(click.src);
         }
     }
 });
