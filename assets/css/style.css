@@ -18,6 +18,8 @@ body{
     background-size:cover;
 }
 
+
+/* debut de la partie de jeu */
 .jeu{
     margin-top: 70px;
     display: flex;
@@ -25,6 +27,7 @@ body{
     justify-content: space-evenly;
 }
 
+/* image de gauche pour gagner des points */
 .jeu .gauche{
     width: 45%;
     border: solid pink 2px;
@@ -37,6 +40,7 @@ body{
     cursor: pointer;
 }
 
+/* magasin */
 .jeu .droite{
     width: 35%;
     border: solid black 2px;

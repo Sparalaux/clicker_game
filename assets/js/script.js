@@ -1,5 +1,10 @@
+//recuperation de l'image/boutton pour gagner des points
 const click = document.querySelector("#click");
+
+//recuperation de la div qui servira de magasin
 const score = document.querySelector("#score");
+
+//querySelector pour chaque element du magasin
 const shopitem1 = document.querySelector("#shopitem1");
 const shopitem2 = document.querySelector("#shopitem2");
 const shopitem3 = document.querySelector("#shopitem3");
@@ -8,17 +13,23 @@ const shopitem5 = document.querySelector("#shopitem5");
 const shopitem6 = document.querySelector("#shopitem6");
 const shopitem7 = document.querySelector("#shopitem7");
 const shopitem8 = document.querySelector("#shopitem8");
-console.log(click);
-console.log(score);
+// console.log(click);
+// console.log(score);
 
 
 
-
+//valeur du score
 var compteur = 0;
+
+//valeur pour chaque clique de la souris
 var clicksouris = 1;
+
+//variable pour connaitre si l'image a été modifier (eviter de faire réaparraitre une ancienne image)
 var imagechanger1 = false;
 var imagechanger2 = false;
 var imagechanger3 = false;
+
+//prix de chaque elements du magasin
 var prix1 = 10;
 var prix2 = 30;
 var prix3 = 100;
@@ -27,12 +38,18 @@ var prix5 = 1000;
 var prix6 = 1500;
 var prix7 = 1700;
 var prix8 = 2500;
+
+//evenement qui augmente le score par la valeur de "clicksouris"
 click.addEventListener("click", () => {
     compteur+=clicksouris;
     score.innerHTML = "score: "+Math.ceil(compteur);
 
 });
 
+//debut des evenements pour les differents article du magasin
+//2 type d'evenement: 
+//-les premiers augmente le score a chaque interval de temps
+//-les deuxiemes augmente la valeurs de clicksouris d'un certain taux
 shopitem1.addEventListener("click", () =>{
     if(compteur>=prix1){
         compteur-=prix1;
