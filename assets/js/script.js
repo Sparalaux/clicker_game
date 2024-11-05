@@ -16,6 +16,38 @@ const shopitem8 = document.querySelector("#shopitem8");
 // console.log(click);
 // console.log(score);
 
+// Get the modal
+var modal = document.getElementById("myModal");
+var modal2 = document.getElementById("myModal2");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+    jeu();
+}
+  
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+}
+
+
+function start(){
+    modal.style.display = "block";
+}
+
+document.addEventListener("onload", start());
+
+
+
+
+
+
 
 
 //valeur du score
